@@ -6,6 +6,7 @@ async function verifyRecaptcha(responseToken) {
 
     try {
         const response = await axios.post(url);
+        console.log('reCAPTCHA response:', response.data);
         return response.data.success;
     } catch (error) {
         console.error('Error verifying reCAPTCHA:', error);
