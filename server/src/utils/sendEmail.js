@@ -6,18 +6,18 @@ const getInContactEmail = (message) => {
     const mailOptions = {
         from: `Developer Form <${process.env.BUSINESS_EMAIL_ADDRESS}>`,
         to: process.env.BUSINESS_EMAIL_ADDRESS,
-        subject: `Contact Form Submission from ${user.name}`,
+        subject: `Contact Form Submission from ${message.name}`,
         html: `
             <p>Dear Junior Developer,</p>
             <p>You have received a new message from your contact form.</p>
             <p>
-                <strong>Email received from: </strong>${user.name}<br>
-                Message: "${user.message}"<br>
-                Email: ${user.email}
+                <strong>Email received from: </strong>${message.name}<br>
+                Message: "${message.message}"<br>
+                Email: ${message.email}
             </p>
             <p>
                 Best regards,<br>
-                ${user.name}
+                ${message.name}
             </p>
         `
     }
