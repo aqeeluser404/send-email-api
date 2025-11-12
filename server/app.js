@@ -40,7 +40,7 @@ app.listen(process.env.PORT, function check(error) {
         console.log("Started server");
     }
 })
-db.connect()
+// db.connect()
 
 app.use((err, req, res, next) => {
     console.error(err.stack);
