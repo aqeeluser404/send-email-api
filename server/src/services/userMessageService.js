@@ -17,7 +17,7 @@ module.exports.SendMessageService = async (message) => {
             dateCreated: new Date()
         })
         getInContactEmail(UserMessageData)
-        await UserMessageData.save()
+        // await UserMessageData.save()
     } catch (error) {
         throw error
     }
